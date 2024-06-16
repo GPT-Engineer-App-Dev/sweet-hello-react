@@ -21,22 +21,23 @@ const fromSupabase = async (query) => {
 
 Table: events
 Columns:
-- id: int8 (number)
+- id:  int8 (number)
 - created_at: timestamptz (string)
 - name: text (string)
 - date: date (string)
-- venue: int8 (number) // foreign key to venues
+- venue: int8 (number) // foreign key to venues.id
 
 Table: comments
 Columns:
-- id: int8 (number)
+- id:  int8 (number)
 - created_at: timestamptz (string)
 - content: text (string)
-- event_id: int8 (number) // foreign key to events
+- event_id: int8 (number) // foreign key to events.id
+- highlighted: boolean (boolean)
 
 Table: venues
 Columns:
-- id: int8 (number)
+- id:  int8 (number)
 - created_at: timestamptz (string)
 - name: text (string)
 - capacity: int8 (number)
